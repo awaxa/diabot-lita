@@ -1,0 +1,62 @@
+GIT
+  remote: https://github.com/dosman711/lita-diabetes.git
+  revision: fa2ca81efdee23ac12ecab2010b697eb6052c050
+  branch: master
+  specs:
+    lita-diabetes (0.0.1)
+      lita (>= 4.2)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    cinch (2.2.4)
+    coderay (1.1.0)
+    faraday (0.9.1)
+      multipart-post (>= 1.2, < 3)
+    http_router (0.11.1)
+      rack (>= 1.0.0)
+      url_mount (~> 0.2.1)
+    i18n (0.7.0)
+    ice_nine (0.11.1)
+    lita (4.2.0)
+      bundler (>= 1.3)
+      faraday (>= 0.8.7)
+      http_router (>= 0.11.1)
+      i18n (>= 0.6.9)
+      ice_nine (>= 0.11.0)
+      multi_json (>= 1.7.7)
+      puma (>= 2.7.1)
+      rack (>= 1.5.2)
+      rb-readline (>= 0.5.1)
+      redis-namespace (>= 1.3.0)
+      thor (>= 0.18.1)
+    lita-irc (2.0.2)
+      cinch (>= 2.0)
+      lita (>= 4.0)
+    method_source (0.8.2)
+    multi_json (1.10.1)
+    multipart-post (2.0.0)
+    pry (0.10.1)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    puma (2.11.1)
+      rack (>= 1.1, < 2.0)
+    rack (1.6.0)
+    rb-readline (0.5.2)
+    redis (3.2.1)
+    redis-namespace (1.5.1)
+      redis (~> 3.0, >= 3.0.4)
+    slop (3.6.0)
+    thor (0.19.1)
+    url_mount (0.2.1)
+      rack
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  lita
+  lita-diabetes!
+  lita-irc
+  pry
