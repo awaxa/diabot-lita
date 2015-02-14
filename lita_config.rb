@@ -46,7 +46,7 @@ Lita.configure do |config|
   case platform
   when :heroku
     config.http.port = ENV["PORT"]
-    config.redis[:url] = ENV["REDISTOGO_URL"]
+    config.redis[:url] = ENV["REDISCLOUD_URL"]
   when :boxen
     config.redis[:url] = ENV["BOXEN_REDIS_URL"]
   else
