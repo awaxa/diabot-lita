@@ -13,6 +13,7 @@ gem "lita-irc"
 # gem "lita-google-images"
 # gem "lita-karma"
 gem "lita-diabetes", :git => "https://github.com/dosman711/lita-diabetes.git", :branch => "master"
+gem "lita-keepalive", :git => "https://github.com/mikian/lita-keepalive.git", :branch => "master"
 
 group :development do
   gem 'pry'

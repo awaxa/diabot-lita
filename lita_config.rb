@@ -45,4 +45,6 @@ Lita.configure do |config|
     config.redis[:url] = ENV["LITA_REDIS_URL"] || "redis://127.0.0.1:6379/"
   end
 
+  config.handlers.keepalive.url = "http://#{options[:name]}.herokuapp.com"
+
 end

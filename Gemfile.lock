@@ -6,6 +6,14 @@ GIT
     lita-diabetes (0.0.1)
       lita (>= 4.2)
 
+GIT
+  remote: https://github.com/mikian/lita-keepalive.git
+  revision: 02e8d1e14ffe865a176aeb6dac86e74abe974a83
+  branch: master
+  specs:
+    lita-keepalive (0.0.2)
+      lita (~> 4.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -59,4 +67,5 @@ DEPENDENCIES
   lita
   lita-diabetes!
   lita-irc
+  lita-keepalive!
   pry
