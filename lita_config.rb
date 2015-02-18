@@ -35,24 +35,23 @@ Lita.configure do |config|
     cinch_config.ssl.use = true
   end
 
+  config.handlers.keepalive.url = "http://#{options[:name]}.herokuapp.com"
+
+  config.handlers.reddit.client_id = options[:reddit_client_id]
+  config.handlers.reddit.client_secret = options[:reddit_client_secret]
+  config.handlers.reddit.reddits = []
+
+  platform = :boxen  if ENV["BOXEN_SETUP_VERSION"]
   platform = :heroku if ENV["DYNO"]
-  platform = :boxen if ENV["BOXEN_SETUP_VERSION"]
   case platform
   when :heroku
     config.http.port = ENV["PORT"]
     config.redis[:url] = ENV["REDISCLOUD_URL"]
+    config.handlers.reddit.reddits << { subreddit: "diabetes", channel: "#reddit-diabetes" }
   when :boxen
     config.redis[:url] = ENV["BOXEN_REDIS_URL"]
   else
     config.redis[:url] = ENV["LITA_REDIS_URL"] || "redis://127.0.0.1:6379/"
   end
-
-  config.handlers.keepalive.url = "http://#{options[:name]}.herokuapp.com"
-
-  config.handlers.reddit.reddits = [
-    { subreddit: "diabetes", channel: "##diabot" },
-  ]
-  config.handlers.reddit.client_id = options[:reddit_client_id]
-  config.handlers.reddit.client_secret = options[:reddit_client_secret]
 
 end
