@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/dosman711/lita-reddit.git
-  revision: dc927ead57ec6c6c90be9cec0b3ce3894c9dff22
+  revision: c330d6bb79c2fe83eafe177938bf03c7a0d4b4e7
   branch: master
   specs:
     lita-reddit (0.0.1)
@@ -26,10 +26,13 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.3.7)
     cinch (2.2.4)
     coderay (1.1.0)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
+    fastimage (1.6.6)
+      addressable (~> 2.3, >= 2.3.5)
     hashie (3.4.0)
     http_router (0.11.1)
       rack (>= 1.0.0)
@@ -62,8 +65,9 @@ GEM
       rack (>= 1.1, < 2.0)
     rack (1.6.0)
     rb-readline (0.5.2)
-    redd (0.7.3)
+    redd (0.7.4)
       faraday (~> 0.9.1)
+      fastimage (~> 1.6.6)
       hashie (~> 3.4.0)
       multi_json (~> 1.10.1)
     redis (3.2.1)
