@@ -7,6 +7,15 @@ GIT
       lita (>= 4.2)
 
 GIT
+  remote: https://github.com/dosman711/lita-reddit.git
+  revision: dc927ead57ec6c6c90be9cec0b3ce3894c9dff22
+  branch: master
+  specs:
+    lita-reddit (0.0.1)
+      lita (>= 4.2)
+      redd
+
+GIT
   remote: https://github.com/mikian/lita-keepalive.git
   revision: 02e8d1e14ffe865a176aeb6dac86e74abe974a83
   branch: master
@@ -21,6 +30,7 @@ GEM
     coderay (1.1.0)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
+    hashie (3.4.0)
     http_router (0.11.1)
       rack (>= 1.0.0)
       url_mount (~> 0.2.1)
@@ -52,6 +62,10 @@ GEM
       rack (>= 1.1, < 2.0)
     rack (1.6.0)
     rb-readline (0.5.2)
+    redd (0.7.3)
+      faraday (~> 0.9.1)
+      hashie (~> 3.4.0)
+      multi_json (~> 1.10.1)
     redis (3.2.1)
     redis-namespace (1.5.1)
       redis (~> 3.0, >= 3.0.4)
@@ -68,4 +82,5 @@ DEPENDENCIES
   lita-diabetes!
   lita-irc
   lita-keepalive!
+  lita-reddit!
   pry
