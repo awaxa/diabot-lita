@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/dosman711/lita-reddit.git
-  revision: 6744d7954ad5fc40fa31e87a927eebce07be21b7
+  revision: 056399384fd8e1884c89f10f14df8acdf4766f7c
   branch: master
   specs:
     lita-reddit (0.0.6)
