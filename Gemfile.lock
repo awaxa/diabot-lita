@@ -1,39 +1,18 @@
 GIT
   remote: https://github.com/dosman711/lita-diabetes.git
-  revision: fa2ca81efdee23ac12ecab2010b697eb6052c050
+  revision: bb8bbb1b7d3f49bb5422dd1da202171862e40ac0
   branch: master
   specs:
     lita-diabetes (0.0.1)
       lita (>= 4.2)
 
-GIT
-  remote: https://github.com/dosman711/lita-reddit.git
-  revision: c330d6bb79c2fe83eafe177938bf03c7a0d4b4e7
-  branch: master
-  specs:
-    lita-reddit (0.0.1)
-      lita (>= 4.2)
-      redd
-
-GIT
-  remote: https://github.com/mikian/lita-keepalive.git
-  revision: 02e8d1e14ffe865a176aeb6dac86e74abe974a83
-  branch: master
-  specs:
-    lita-keepalive (0.0.2)
-      lita (~> 4.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.3.7)
     cinch (2.2.4)
     coderay (1.1.0)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
-    fastimage (1.6.6)
-      addressable (~> 2.3, >= 2.3.5)
-    hashie (3.4.0)
     http_router (0.11.1)
       rack (>= 1.0.0)
       url_mount (~> 0.2.1)
@@ -54,6 +33,10 @@ GEM
     lita-irc (2.0.2)
       cinch (>= 2.0)
       lita (>= 4.0)
+    lita-keepalive (0.0.2)
+      lita (~> 4.0)
+    lita-reddit (0.0.6)
+      lita (>= 4.2)
     method_source (0.8.2)
     multi_json (1.10.1)
     multipart-post (2.0.0)
@@ -65,11 +48,6 @@ GEM
       rack (>= 1.1, < 2.0)
     rack (1.6.0)
     rb-readline (0.5.2)
-    redd (0.7.4)
-      faraday (~> 0.9.1)
-      fastimage (~> 1.6.6)
-      hashie (~> 3.4.0)
-      multi_json (~> 1.10.1)
     redis (3.2.1)
     redis-namespace (1.5.1)
       redis (~> 3.0, >= 3.0.4)
@@ -85,6 +63,6 @@ DEPENDENCIES
   lita
   lita-diabetes!
   lita-irc
-  lita-keepalive!
-  lita-reddit!
+  lita-keepalive
+  lita-reddit
   pry
