@@ -12,20 +12,22 @@ Lita.configure do |config|
     :nickserv_password    => ENV["LITA_NICKSERV_PASSWORD"] || "",
     :reddit_client_id     => ENV["LITA_REDDIT_CLIENT_ID"] || "",
     :reddit_client_secret => ENV["LITA_REDDIT_CLIENT_SECRET"] || "",
+    :log_level            => ENV["LITA_LOG_LEVEL"] || "info",
+    :irc_log_level        => ENV["LITA_IRC_LOG_LEVEL"] || "info",
   }
 
   config.robot.name = options[:name]
 
   config.robot.locale = :en
 
-  config.robot.log_level = :debug
+  config.robot.log_level = options[:log_level].to_sym
 
   config.robot.admins = options[:admins].split(',') unless options[:admins].empty?
 
   config.robot.adapter = :irc
   config.adapters.irc.server = "irc.freenode.net"
   config.adapters.irc.channels = options[:channels].split(",")
-  config.adapters.irc.log_level = :debug
+  config.adapters.irc.log_level = options[:irc_log_level].to_sym
   config.adapters.irc.user = options[:name]
   config.adapters.irc.password = options[:nickserv_password] unless options[:nickserv_password].empty?
   config.adapters.irc.realname = options[:name]
