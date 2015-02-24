@@ -6,14 +6,6 @@ GIT
     lita-diabetes (0.0.1)
       lita (>= 4.2)
 
-GIT
-  remote: https://github.com/dosman711/lita-reddit.git
-  revision: 056399384fd8e1884c89f10f14df8acdf4766f7c
-  branch: master
-  specs:
-    lita-reddit (0.0.6)
-      lita (>= 4.2)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -43,6 +35,8 @@ GEM
       lita (>= 4.0)
     lita-keepalive (0.0.2)
       lita (~> 4.0)
+    lita-reddit (0.0.7)
+      lita (>= 4.2)
     method_source (0.8.2)
     multi_json (1.10.1)
     multipart-post (2.0.0)
@@ -70,5 +64,5 @@ DEPENDENCIES
   lita-diabetes!
   lita-irc
   lita-keepalive
-  lita-reddit!
+  lita-reddit
   pry
