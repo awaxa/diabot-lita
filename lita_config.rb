@@ -16,7 +16,7 @@ Lita.configure do |config|
     :irc_log_level        => ENV["LITA_IRC_LOG_LEVEL"] || "info",
   }
 
-  config.robot.name = options[:name]
+  config.robot.name = options[:name].dup
 
   config.robot.locale = :en
 
