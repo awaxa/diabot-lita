@@ -16,7 +16,7 @@ Lita.configure do |config|
     :irc_log_level        => ENV["LITA_IRC_LOG_LEVEL"] || "info",
   }
 
-  config.robot.name = options[:name].dup
+  config.robot.name = options[:name]
 
   config.robot.locale = :en
 
@@ -28,8 +28,10 @@ Lita.configure do |config|
   config.adapters.irc.server = "irc.freenode.net"
   config.adapters.irc.channels = options[:channels].split(",")
   config.adapters.irc.log_level = options[:irc_log_level].to_sym
-  config.adapters.irc.user = options[:name]
-  config.adapters.irc.password = options[:nickserv_password] unless options[:nickserv_password].empty?
+  unless options[:nickserv_password].empty?
+    config.adapters.irc.user = "diabot"
+    config.adapters.irc.password = options[:nickserv_password]
+  end
   config.adapters.irc.realname = options[:name]
   config.adapters.irc.cinch = lambda do |cinch_config|
     cinch_config.max_reconnect_delay = 123
