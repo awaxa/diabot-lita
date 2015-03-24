@@ -6,14 +6,13 @@ end
 Lita.configure do |config|
 
   options = {}
-  options[:name] = "diabutt"
+  options[:name] = "diabot"
   options[:channels] = [ "##diabot" ]
 
   platform = :boxen  if ENV["BOXEN_SETUP_VERSION"]
   platform = :heroku if ENV["DYNO"]
   case platform
   when :heroku
-    options[:name]     = "diabot"
     options[:channels] = [ "#reddit-diabetes" , "#reddit-diabetes-ops" ]
     config.http.port   = ENV["PORT"]
     config.redis[:url] = ENV["REDISCLOUD_URL"]
