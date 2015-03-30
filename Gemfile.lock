@@ -45,7 +45,7 @@ GEM
       lita (>= 4.0)
     lita-keepalive (0.0.2)
       lita (~> 4.0)
-    lita-web-title (1.0.0)
+    lita-web-title (1.0.3)
       lita (>= 4.3)
       nokogiri (>= 1.6.6)
     method_source (0.8.2)
