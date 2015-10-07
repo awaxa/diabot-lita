@@ -32,7 +32,7 @@ Lita.configure do |config|
 
   config.robot.name = options[:name]
   config.robot.locale = :en
-  config.robot.log_level = :debug
+  config.robot.log_level = :info
   config.robot.adapter = :irc
   config.adapters.irc.server = "irc.freenode.net"
   config.adapters.irc.channels = options[:channels]
