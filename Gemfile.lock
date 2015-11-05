@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/dosman711/lita-diabetes.git
-  revision: ce5f9928cfa464a935242f140fdb3e3964be46b6
+  revision: 3ccf843bd0ebb968fc0893833f4f733e39b3d47f
   branch: master
   specs:
     lita-diabetes (0.0.1)
