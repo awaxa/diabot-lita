@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/dosman711/lita-diabetes.git
-  revision: bb8bbb1b7d3f49bb5422dd1da202171862e40ac0
+  revision: ce5f9928cfa464a935242f140fdb3e3964be46b6
   branch: master
   specs:
     lita-diabetes (0.0.1)
@@ -8,16 +8,16 @@ GIT
 
 GIT
   remote: https://github.com/dosman711/lita-reddit.git
-  revision: 472d21a767c8cbabb0cd5ca91905800099124b80
+  revision: 080cb6e86a302d3fae7a5cad5ca09c1bd47ba04d
   branch: master
   specs:
     lita-reddit (0.0.8)
-      lita (>= 4.3)
+      lita
 
 GEM
   remote: https://rubygems.org/
   specs:
-    cinch (2.3.0)
+    cinch (2.3.1)
     coderay (1.1.0)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
