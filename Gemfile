@@ -10,5 +10,5 @@ gem "lita-reddit", :git => "https://github.com/dosman711/lita-reddit.git", :bran
 gem "lita-diabetes", :git => "https://github.com/dosman711/lita-diabetes.git", :branch => "master"
 
 group :development do
-  gem 'pry'
+  gem "pry"
 end
