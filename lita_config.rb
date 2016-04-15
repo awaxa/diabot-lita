@@ -32,11 +32,11 @@ Lita.configure do |config|
 
   config.robot.name = options[:name]
   config.robot.locale = :en
-  config.robot.log_level = :info
+  config.robot.log_level = :debug
   config.robot.adapter = :irc
   config.adapters.irc.server = "irc.freenode.net"
   config.adapters.irc.channels = options[:channels]
-  config.adapters.irc.log_level = :info
+  config.adapters.irc.log_level = :debug
   if ENV["LITA_NICKSERV_PASSWORD"]
     config.adapters.irc.user = "diabot"
     config.adapters.irc.password = ENV["LITA_NICKSERV_PASSWORD"]
