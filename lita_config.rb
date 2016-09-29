@@ -25,7 +25,7 @@ Lita.configure do |config|
   config.handlers.reddit.client_id     = ENV["LITA_REDDIT_CLIENT_ID"] || ""
   config.handlers.reddit.client_secret = ENV["LITA_REDDIT_CLIENT_SECRET"] || ""
   config.handlers.reddit.reddits = [
-    { subreddit: "diabetes", channel: "#reddit-diabetes" },
+    { subreddit: "diabetes", channel: "#reddit-diabetes-ops" },
   ]
 
   config.handlers.keepalive.url = "http://#{options[:name]}.herokuapp.com"
