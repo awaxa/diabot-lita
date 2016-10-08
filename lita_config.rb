@@ -7,17 +7,14 @@ Lita.configure do |config|
 
   options = {}
   options[:name] = "diabot"
-  options[:channels] = [ "##diabot" ]
+  options[:channels] = [ "#reddit-diabetes-ops-debug" ]
 
-  platform = :boxen  if ENV["BOXEN_SETUP_VERSION"]
   platform = :heroku if ENV["DYNO"]
   case platform
   when :heroku
-    options[:channels] = [ "#reddit-diabetes" , "#reddit-diabetes-ops" ]
+    options[:channels] << [ "#reddit-diabetes" , "#reddit-diabetes-ops" ]
     config.http.port   = ENV["PORT"]
     config.redis[:url] = ENV["REDISCLOUD_URL"]
-  when :boxen
-    config.redis[:url] = ENV["BOXEN_REDIS_URL"]
   else
     config.redis[:url] = ENV["LITA_REDIS_URL"] || "redis://127.0.0.1:6379/"
   end
@@ -25,7 +22,7 @@ Lita.configure do |config|
   config.handlers.reddit.client_id     = ENV["LITA_REDDIT_CLIENT_ID"] || ""
   config.handlers.reddit.client_secret = ENV["LITA_REDDIT_CLIENT_SECRET"] || ""
   config.handlers.reddit.reddits = [
-    { subreddit: "diabetes", channel: "#reddit-diabetes-ops" },
+    { subreddit: "diabetes", channel: "#reddit-diabetes-ops-debug" },
   ]
 
   config.handlers.keepalive.url = "http://#{options[:name]}.herokuapp.com"
