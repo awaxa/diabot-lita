@@ -34,12 +34,13 @@ Lita.configure do |config|
   config.adapters.irc.server = "irc.freenode.net"
   config.adapters.irc.channels = options[:channels].flatten
   config.adapters.irc.log_level = :debug
-  if ENV["LITA_NICKSERV_PASSWORD"]
-    config.adapters.irc.user = "diabot"
-    config.adapters.irc.password = ENV["LITA_NICKSERV_PASSWORD"]
-  end
+  config.adapters.irc.user = "diabot"
   config.adapters.irc.realname = options[:name]
   config.adapters.irc.cinch = lambda do |cinch_config|
+    cinch_config.sasl.username = "diabot"
+    if ENV["LITA_NICKSERV_PASSWORD"]
+      cinch_config.sasl.password = ENV["LITA_NICKSERV_PASSWORD"]
+    end
     cinch_config.max_reconnect_delay = 123
     cinch_config.port = "6697"
     cinch_config.ssl.use = true
