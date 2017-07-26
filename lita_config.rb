@@ -26,7 +26,7 @@ Lita.configure do |config|
 
   config.handlers.keepalive.url = "http://#{options[:name]}.herokuapp.com"
 
-  config.handlers.diabetes.lower_bg_bound = '20'
+  config.handlers.diabetes.lower_bg_bound = '1'
   config.handlers.diabetes.upper_bg_bound = '35'
 
   config.robot.name = options[:name]
