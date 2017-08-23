@@ -8,4 +8,5 @@ gem "lita-diabetes", :git => "https://github.com/dosman711/lita-diabetes.git", :
 
 group :development do
   gem "pry"
+  gem 'rubocop'
 end
