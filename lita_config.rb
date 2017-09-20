@@ -1,8 +1,3 @@
-begin
-  require 'pry'
-rescue LoadError
-end
-
 Lita.configure do |config|
   options = {}
   options[:name] = 'diabot'
