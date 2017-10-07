@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'lita'
+gem 'lita-eval'
 gem 'lita-irc'
 gem 'lita-keepalive'
 
