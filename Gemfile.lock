@@ -1,18 +1,18 @@
 GIT
+  remote: https://github.com/awaxa/lita-reddit.git
+  revision: 1aad4409cc352cbe858c24fbc1fb974724c03571
+  branch: https
+  specs:
+    lita-reddit (0.0.8)
+      lita
+
+GIT
   remote: https://github.com/dosman711/lita-diabetes.git
   revision: d3559180b110b51a01d9dff80e66fa8561237b68
   branch: master
   specs:
     lita-diabetes (0.0.1)
       lita (>= 4.2)
-
-GIT
-  remote: https://github.com/dosman711/lita-reddit.git
-  revision: 080cb6e86a302d3fae7a5cad5ca09c1bd47ba04d
-  branch: master
-  specs:
-    lita-reddit (0.0.8)
-      lita
 
 GEM
   remote: https://rubygems.org/
