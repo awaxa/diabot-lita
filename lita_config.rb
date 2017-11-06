@@ -18,7 +18,7 @@ Lita.configure do |config|
   config.handlers.reddit.reddits = [
     { subreddit: 'diabetes', channel: '#reddit-diabetes-ops-debug' }
   ]
-  config.handlers.reddit.post_text = "%{title} | %{shortlink}"
+  config.handlers.reddit.post_text = "%{shortlink} | %{title}"
 
   config.handlers.keepalive.url = "http://#{options[:name]}.herokuapp.com"
 
